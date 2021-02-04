@@ -10,11 +10,11 @@ var score = 0;
 
 var highScore = [
   {
-    name : "Vishal",
+    name : "saikumar",
     score : 5
   },
   {
-    name : "Aayushi",
+    name : "",
     score : 4
   }
 ]
@@ -22,15 +22,15 @@ var highScore = [
 var questions = [
   {
     question : "What is my name ? ",
-    answer : "vishal"
+    answer : "saikumar"
   },
   {
     question : "Where Am I From ? ",
-    answer : "delhi"
+    answer : "nivagam"
   },
   {
     question : "What is my age ? ",
-    answer : "24"
+    answer : "26"
   },
   {
     question : "What is my favourite food ? ",
@@ -38,7 +38,7 @@ var questions = [
   },
   {
     question : "What is my favourite sport ? ",
-    answer : "Football" 
+    answer : "volleyball" 
   }
 ]
 
