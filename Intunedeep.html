@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intune Cheat Sheet</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; transition: background-color 0.3s, color 0.3s; }
+        h1 { text-align: center; }
+        .button-container { text-align: center; margin-bottom: 20px; }
+        .button-container button { 
+            margin: 5px; 
+            padding: 10px 15px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 5px;
+        }
+        .section { display: none; }
+        .dark-mode { background-color: #121212; color: #ffffff; }
+        .dark-mode .button-container button { background-color: #1e7e34; }
+    </style>
+</head>
+<body>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <h1>Intune Cheat Sheet</h1>
+    
+    <div class="button-container">
+        <button onclick="showSection('enrollment')">Device Enrollment</button>
+        <button onclick="showSection('app_management')">App Management</button>
+        <button onclick="showSection('compliance_security')">Compliance & Security</button>
+        <button onclick="showSection('config_profiles')">Configuration Profiles</button>
+        <button onclick="showSection('updates')">Windows Updates</button>
+        <button onclick="showSection('security')">Endpoint Security</button>
+        <button onclick="showSection('autopilot')">Autopilot Deployment</button>
+        <button onclick="showSection('remote_actions')">Remote Actions</button>
+        <button onclick="showSection('monitoring')">Monitoring & Reports</button>
+        <button onclick="showSection('co_management')">Co-Management with SCCM</button>
+    </div>
+    
+    <div id="enrollment" class="section">
+        <h2>Device Enrollment</h2>
+        <ul>
+            <li><a href="#windows_enrollment">Windows Enrollment (AutoPilot, Hybrid AD)</a></li>
+            <li><a href="#android_enrollment">Android Enrollment (Fully Managed, BYOD)</a></li>
+            <li><a href="#ios_enrollment">iOS/macOS Enrollment (ABM, Manual)</a></li>
+            <li><a href="#restrictions">Enrollment Restrictions</a></li>
+        </ul>
+    </div>
+    
+    <div id="app_management" class="section">
+        <h2>App Management</h2>
+        <ul>
+            <li><a href="#microsoft_store">Microsoft Store Apps</a></li>
+            <li><a href="#win32_apps">Win32 App Deployment</a></li>
+            <li><a href="#lob_apps">Line-of-Business (LOB) Apps</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
