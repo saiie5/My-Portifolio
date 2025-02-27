@@ -1,18 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCCM Cheat Sheet</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>SCCM Cheat Sheet</h1>
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Steps</th>
+            <th>Explanation</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>Install SCCM Client</td>
+            <td>1. Use Client Push, GPO, or Manual Install.<br>2. Run `ccmsetup.exe` if needed.<br>3. Verify installation via Configuration Manager Properties.<br>4. Check logs (`ccmsetup.log`).</td>
+            <td>The SCCM client must be installed on devices to receive policies and software deployments.</td>
+            <td>Install SCCM Client on all new workstations using Client Push.</td>
+        </tr>
+        <tr>
+            <td>Deploy Software</td>
+            <td>1. Go to Software Library → Applications.<br>2. Create a New Application (use MSI or EXE).<br>3. Set detection rules.<br>4. Deploy to a Device Collection.<br>5. Monitor via Deployment Status.</td>
+            <td>Deploys applications like Microsoft Office, Chrome, or custom apps.</td>
+            <td>A company deploys Google Chrome to all employees.</td>
+        </tr>
+        <tr>
+            <td>Deploy Windows Updates</td>
+            <td>1. Enable WSUS & Software Update Point.<br>2. Sync updates from Windows Update.<br>3. Create a Software Update Group.<br>4. Deploy updates to a Device Collection.<br>5. Monitor compliance reports.</td>
+            <td>Ensures all devices stay updated with the latest Windows patches.</td>
+            <td>Deploy Patch Tuesday Updates to all Windows 11 PCs every month.</td>
+        </tr>
+        <tr>
+            <td>OS Deployment (OSD)</td>
+            <td>1. Enable PXE Boot.<br>2. Import Windows 10/11 Image.<br>3. Create a Task Sequence.<br>4. Deploy to PXE Boot-enabled devices.<br>5. Monitor deployment progress.</td>
+            <td>Automates Windows installation with drivers, domain join, and software pre-installed.</td>
+            <td>Deploy Windows 11 to 100 new laptops using PXE Boot.</td>
+        </tr>
+        <tr>
+            <td>Enforce Security Policies</td>
+            <td>1. Create a Compliance Policy.<br>2. Configure password, BitLocker, Defender, and Firewall settings.<br>3. Deploy to All Workstations.<br>4. Monitor non-compliance in Reports.</td>
+            <td>Ensures all devices meet security requirements before granting network access.</td>
+            <td>Require BitLocker encryption on all company laptops.</td>
+        </tr>
+        <tr>
+            <td>Troubleshoot SCCM Issues</td>
+            <td>1. Check logs (`ccmsetup.log`, `AppEnforce.log`, `smsts.log`).<br>2. Use SCCM Reports for failures.<br>3. Run `ccmrepair.exe` for client issues.<br>4. Verify network and boundary settings.</td>
+            <td>Logs and reports help identify and fix failed deployments and SCCM errors.</td>
+            <td>Fix failed software deployment by checking `AppEnforce.log`.</td>
+        </tr>
+        <tr>
+            <td>Manage Remote Devices (CMG)</td>
+            <td>1. Enable Cloud Management Gateway (CMG).<br>2. Configure Intune Co-Management.<br>3. Deploy SCCM Client using Internet-based Management.<br>4. Manage updates & deployments over the cloud.</td>
+            <td>Allows SCCM to manage remote devices without VPN using Azure-based CMG.</td>
+            <td>Deploy software to work-from-home employees over the internet.</td>
+        </tr>
+        <tr>
+            <td>Enroll Devices into SCCM/Intune</td>
+            <td>1. Enable Co-Management in SCCM.<br>2. Allow automatic Intune enrollment.<br>3. Configure workloads for SCCM or Intune.<br>4. Deploy software & policies based on enrollment status.</td>
+            <td>Ensures hybrid device management between SCCM (on-prem) and Intune (cloud).</td>
+            <td>A new laptop automatically registers in Intune & SCCM for policy enforcement.</td>
+        </tr>
+    </table>
+</body>
+</html>
 
-### 📌 **SCCM Cheat Sheet: Quick Reference Guide**  
-
-| **Topic** | **Steps (Step-by-Step Guide)** | **Explanation** | **Example** |
-|-----------|--------------------------------|----------------|-------------|
-| **Install SCCM Client** | 1. Use **Client Push**, GPO, or Manual Install. <br> 2. Run `ccmsetup.exe` if needed. <br> 3. Verify client installation via `Configuration Manager Properties`. <br> 4. Check logs (`ccmsetup.log`). | The SCCM client must be installed on devices to receive policies and software deployments. | Install SCCM Client on all **new workstations** automatically using **Client Push**. |
-| **Deploy Software** | 1. Go to **Software Library → Applications**. <br> 2. **Create a New Application** (use MSI or EXE). <br> 3. Set **detection rules** (e.g., check if `C:\Program Files\App\app.exe` exists). <br> 4. **Deploy to a Device Collection**. <br> 5. Monitor via **Deployment Status**. | Deploys applications like **Microsoft Office, Chrome, or custom apps** to users or devices. | A company deploys **Google Chrome** to all employees. |
-| **Deploy Windows Updates** | 1. Enable **WSUS & Software Update Point (SUP)**. <br> 2. Sync updates from **Windows Update**. <br> 3. Create a **Software Update Group (SUG)**. <br> 4. Deploy updates to a **Device Collection**. <br> 5. Monitor compliance reports. | Ensures all devices stay updated with the latest **Windows patches and security updates**. | Deploy **Patch Tuesday Updates** to all Windows 11 PCs every month. |
-| **OS Deployment (OSD)** | 1. Enable **PXE Boot** on Distribution Points. <br> 2. Import **Windows 10/11 Image** (`.WIM`). <br> 3. Create a **Task Sequence** to automate OS installation. <br> 4. Deploy to a **PXE Boot-enabled Device Collection**. <br> 5. Monitor deployment progress (`smsts.log`). | Automates **Windows installation** with drivers, domain join, and software pre-installed. | Deploy **Windows 11** to 100 new laptops in HR department using PXE Boot. |
-| **Enforce Security Policies** | 1. Create a **Compliance Policy** in SCCM. <br> 2. Configure **password, BitLocker, Defender, and Firewall settings**. <br> 3. Deploy to **All Workstations** collection. <br> 4. Monitor non-compliance in **Reports → Compliance 1**. | Ensures all devices meet **security requirements** before granting network access. | Require **BitLocker encryption** on all company laptops. |
-| **Troubleshoot SCCM Issues** | 1. Check **logs** (`ccmsetup.log`, `AppEnforce.log`, `smsts.log`). <br> 2. Use **SCCM Reports** for application and update failures. <br> 3. Run `ccmrepair.exe` for client health issues. <br> 4. Verify network and boundary settings. | Logs and reports help **identify and fix failed deployments, updates, and SCCM errors**. | Fix **failed software deployment** by checking `AppEnforce.log`. |
-| **Manage Remote Devices (CMG)** | 1. Enable **Cloud Management Gateway (CMG)** in SCCM. <br> 2. Configure **Intune Co-Management**. <br> 3. Deploy SCCM Client using **Internet-based Management**. <br> 4. Manage updates & software deployments over the cloud. | Allows **SCCM to manage remote devices** without VPN, using **Azure-based CMG**. | Deploy software to **work-from-home employees** over the internet. |
-| **Enroll Devices into SCCM/Intune** | 1. Enable **Co-Management** in SCCM Console. <br> 2. Allow **automatic Intune enrollment** for SCCM-managed devices. <br> 3. Configure workloads to be managed by **SCCM or Intune**. <br> 4. Deploy software & policies based on enrollment status. | Ensures **hybrid device management** between SCCM (on-prem) and Intune (cloud). | A new laptop automatically **registers in Intune & SCCM** for policy enforcement. |
-
----
-
-This **cheat sheet** provides a **quick reference** for SCCM admins to **execute common tasks efficiently**.  
 
