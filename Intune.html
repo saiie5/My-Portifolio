@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intune Cheat Sheet</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #28a745; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Intune Cheat Sheet</h1>
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Steps</th>
+            <th>Explanation</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>Enroll Devices in Intune</td>
+            <td>1. Go to Microsoft Endpoint Manager Admin Center.<br>2. Navigate to Devices → Enroll Devices.<br>3. Choose enrollment method (AutoPilot, BYOD, Hybrid AD Join).<br>4. Assign users and apply policies.<br>5. Monitor enrollment status.</td>
+            <td>Allows organizations to manage corporate and personal devices with Intune policies.</td>
+            <td>A company enrolls new Windows 11 laptops using AutoPilot for zero-touch deployment.</td>
+        </tr>
+        <tr>
+            <td>Deploy Applications</td>
+            <td>1. Go to Microsoft Endpoint Manager Admin Center.<br>2. Navigate to Apps → Windows/macOS/iOS/Android.<br>3. Click Add and choose the application type.<br>4. Upload package or select from Microsoft Store.<br>5. Assign to user/device groups.</td>
+            <td>Deploys applications remotely to managed devices.</td>
+            <td>Deploys Microsoft Office to all company laptops using Intune.</td>
+        </tr>
+        <tr>
+            <td>Configure Compliance Policies</td>
+            <td>1. Navigate to Endpoint Security → Compliance policies.<br>2. Click Create Policy and select platform.<br>3. Configure security settings (password, encryption, updates).<br>4. Assign to groups and monitor compliance reports.</td>
+            <td>Ensures devices meet security requirements before accessing corporate resources.</td>
+            <td>Require BitLocker encryption and automatic updates on all Windows devices.</td>
+        </tr>
+        <tr>
+            <td>Manage Windows Update Policies</td>
+            <td>1. Go to Endpoint Security → Windows Update rings.<br>2. Create a new update ring.<br>3. Set update deferral policies and deadlines.<br>4. Assign to device groups.</td>
+            <td>Controls Windows Update behavior on managed devices.</td>
+            <td>Defers Windows 11 updates for 14 days to prevent disruptions.</td>
+        </tr>
+        <tr>
+            <td>Configure Conditional Access</td>
+            <td>1. Go to Endpoint Security → Conditional Access.<br>2. Create a new policy.<br>3. Define conditions (device compliance, location, risk level).<br>4. Set access controls (MFA, require compliant device).<br>5. Assign to user groups.</td>
+            <td>Restricts access to company resources based on security conditions.</td>
+            <td>Blocks sign-ins from non-compliant devices unless MFA is used.</td>
+        </tr>
+        <tr>
+            <td>Deploy Configuration Profiles</td>
+            <td>1. Navigate to Devices → Configuration profiles.<br>2. Click Create Profile and select platform.<br>3. Configure settings (Wi-Fi, VPN, certificates, security baselines).<br>4. Assign to devices or users.</td>
+            <td>Applies policies and settings to managed devices.</td>
+            <td>Pushes Wi-Fi and VPN settings to all corporate smartphones.</td>
+        </tr>
+        <tr>
+            <td>Monitor and Troubleshoot Intune Issues</td>
+            <td>1. Go to Endpoint Manager Admin Center.<br>2. Navigate to Monitor → Device Compliance/Health.<br>3. Check error reports and resolve failures.<br>4. Use log files (MDM diagnostics, event viewer) for troubleshooting.</td>
+            <td>Helps diagnose and resolve Intune-related issues on managed devices.</td>
+            <td>Fixes failed policy deployment by reviewing compliance errors.</td>
+        </tr>
+    </table>
+</body>
+</html>
