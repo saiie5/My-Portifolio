@@ -29,10 +29,34 @@
             <td>A company enrolls new Windows 11 laptops using AutoPilot for zero-touch deployment.</td>
         </tr>
         <tr>
+            <td>Windows Device Enrollment (AutoPilot)</td>
+            <td>1. Go to Microsoft Endpoint Manager Admin Center.<br>2. Navigate to Devices → Windows Enrollment.<br>3. Configure Windows AutoPilot Deployment Profiles.<br>4. Import device hardware IDs and assign profiles.<br>5. Deploy AutoPilot devices and monitor setup process.</td>
+            <td>Windows AutoPilot simplifies new device setup and provisioning with cloud-based configuration.</td>
+            <td>A company pre-configures Windows 11 laptops with security settings before shipping to employees.</td>
+        </tr>
+        <tr>
+            <td>Android Device Enrollment</td>
+            <td>1. Navigate to Devices → Android Enrollment.<br>2. Select enrollment type (Fully Managed, COPE, BYOD).<br>3. Configure Enrollment Profiles and assign them.<br>4. Guide users to enroll devices via Microsoft Intune app.</td>
+            <td>Manages Android devices by applying security policies, app restrictions, and compliance settings.</td>
+            <td>Enroll company-owned Samsung phones in Fully Managed mode for policy enforcement.</td>
+        </tr>
+        <tr>
+            <td>iOS/macOS Device Enrollment</td>
+            <td>1. Navigate to Devices → iOS/macOS Enrollment.<br>2. Integrate with Apple Business Manager (ABM).<br>3. Create enrollment profiles and assign them.<br>4. Enroll devices via Automated Device Enrollment (ADE) or manually using Company Portal.</td>
+            <td>Manages Apple devices by enforcing policies, installing apps, and applying security controls.</td>
+            <td>Enroll corporate iPhones using Apple Business Manager for seamless management.</td>
+        </tr>
+        <tr>
             <td>Deploy Applications</td>
             <td>1. Go to Microsoft Endpoint Manager Admin Center.<br>2. Navigate to Apps → Windows/macOS/iOS/Android.<br>3. Click Add and choose the application type.<br>4. Upload package or select from Microsoft Store.<br>5. Assign to user/device groups.</td>
             <td>Deploys applications remotely to managed devices.</td>
             <td>Deploys Microsoft Office to all company laptops using Intune.</td>
+        </tr>
+        <tr>
+            <td>Win32 App Deployment</td>
+            <td>1. Prepare the app using Microsoft Win32 Content Prep Tool.<br>2. Navigate to Apps → Windows Apps → Add Win32 App.<br>3. Upload `.intunewin` package and configure install command.<br>4. Assign to device groups and monitor deployment.</td>
+            <td>Allows deployment of legacy Win32 applications to Windows devices via Intune.</td>
+            <td>Deploys Adobe Acrobat as a Win32 app to all corporate laptops.</td>
         </tr>
         <tr>
             <td>Configure Compliance Policies</td>
