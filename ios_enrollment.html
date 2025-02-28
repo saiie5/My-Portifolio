@@ -43,38 +43,36 @@
 
     <div class="container">
         <div class="section">
-            <h2>1. Automated Device Enrollment</h2>
-            <p>Best for corporate-owned iOS devices enrolled through Apple Business Manager.</p>
+            <h2>1. Automated Device Enrollment (ADE)</h2>
+            <p>Best for corporate-owned iOS devices using Apple Business Manager.</p>
             <p><strong>Steps:</strong></p>
             <ul>
-                <li>Ensure your organization is set up with Apple Business Manager.</li>
-                <li>Sync Apple devices with Intune.</li>
-                <li>Assign an enrollment profile to the devices.</li>
-                <li>Devices enroll automatically upon activation.</li>
+                <li>Ensure devices are in Apple Business Manager (ABM).</li>
+                <li>Sync ABM with Intune.</li>
+                <li>Assign devices to an enrollment profile.</li>
+                <li>Devices auto-enroll upon activation.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>2. User Enrollment</h2>
-            <p>Best for personal (BYOD) iOS devices where work apps need separation.</p>
+            <h2>2. Apple User Enrollment</h2>
+            <p>Best for personal (BYOD) devices with limited management.</p>
             <p><strong>Steps:</strong></p>
             <ul>
-                <li>Users download the Microsoft Intune Company Portal app.</li>
-                <li>Sign in with a work account.</li>
-                <li>Follow the guided steps to set up a work profile.</li>
-                <li>Work apps and data are managed separately from personal apps.</li>
+                <li>Go to <strong>Settings → General → VPN & Device Management</strong>.</li>
+                <li>Click <strong>Enroll in Intune</strong> and follow prompts.</li>
+                <li>Device enrolls with work and personal separation.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>3. Device Enrollment</h2>
-            <p>Best for corporate-owned iOS devices where full control is required.</p>
+            <h2>3. Manual Enrollment</h2>
+            <p>Best for existing iOS devices without ABM integration.</p>
             <p><strong>Steps:</strong></p>
             <ul>
-                <li>Reset the device to factory settings if needed.</li>
-                <li>Download and install the Microsoft Intune Company Portal app.</li>
-                <li>Sign in with a work account and follow the enrollment steps.</li>
-                <li>Device enrolls and applies corporate policies automatically.</li>
+                <li>Install the **Intune Company Portal** app from the App Store.</li>
+                <li>Sign in with a work account and follow setup instructions.</li>
+                <li>Device enrolls in Intune and applies policies.</li>
             </ul>
         </div>
     </div>
