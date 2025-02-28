@@ -22,32 +22,31 @@
     
     <div id="newFeatures" class="content">
         <h2>New Features</h2>
-        <p><strong>Enhanced Device Compliance Policies:</strong> Administrators can now define more specific compliance rules, which allow for stricter security enforcement. This ensures that only devices meeting these granular requirements can access corporate resources.</p>
-        <p><strong>Advanced Reporting Dashboards:</strong> A newly designed dashboard provides IT administrators with in-depth analytics about device health, policy compliance, and security threats. These insights enable proactive problem-solving and optimization of endpoint management strategies.</p>
+        <p><strong>Enhanced Device Compliance Policies:</strong> More precise compliance rules allow for tighter security enforcement, ensuring only authorized devices access corporate resources. These policies help mitigate security risks and improve organizational compliance.</p>
+        <p><strong>Advanced Reporting Dashboards:</strong> The latest reporting dashboards provide IT administrators with an enhanced overview of device health and compliance trends. These dashboards offer data visualization tools to help identify security vulnerabilities and enforce policies more effectively.</p>
     </div>
     
     <div id="bugFixes" class="content">
         <h2>Bug Fixes</h2>
-        <p><strong>Resolved Policy Deployment Delays:</strong> Some users reported that policies were taking an unusually long time to be pushed to devices. This issue has now been fixed, ensuring policies deploy more efficiently and without unnecessary delays.</p>
-        <p><strong>Fixed Application Installation Errors:</strong> A problem affecting certain Android devices, where apps failed to install due to inconsistent configurations, has been resolved. This fix ensures a smoother deployment process for mobile applications across diverse devices.</p>
+        <p><strong>Resolved Policy Deployment Delays:</strong> A recent issue causing delays in policy deployment to devices has been resolved. Policies now apply in a timely manner, ensuring smoother IT operations and security compliance.</p>
+        <p><strong>Fixed Application Installation Errors:</strong> Some Android devices faced errors while installing corporate apps. This fix ensures that all applications install properly without requiring manual intervention, improving the user experience and reducing IT support requests.</p>
     </div>
     
     <div id="knownIssues" class="content">
         <h2>Known Issues</h2>
-        <p><strong>iOS Profile Installation Prompts:</strong> Users installing configuration profiles on iOS devices might experience repeated prompts asking for installation confirmation. Microsoft is currently investigating the root cause and working on a resolution.</p>
-        <p><strong>Windows Autopilot Enrollment Hangs:</strong> Some Windows devices may freeze during the Autopilot enrollment process. A temporary workaround involves restarting the device and retrying enrollment, though a permanent fix is being developed.</p>
+        <p><strong>iOS Profile Installation Prompts:</strong> Some users encounter repeated prompts when installing configuration profiles on iOS devices. Microsoft is currently investigating the cause and working on a fix to improve the installation process.</p>
+        <p><strong>Windows Autopilot Enrollment Hangs:</strong> Certain Windows devices may hang during Autopilot enrollment. A temporary workaround is to restart the device and retry enrollment. Microsoft is actively developing a permanent fix.</p>
     </div>
     
     <div id="additionalNotes" class="content">
         <h2>Additional Notes</h2>
-        <p><strong>Upcoming Deprecation:</strong> Support for Windows 8.1 devices will officially end on July 1, 2025. Organizations using these devices are advised to upgrade to a newer, supported version of Windows to maintain security and compatibility.</p>
-        <p><strong>Feedback Opportunity:</strong> Microsoft is seeking feedback from administrators on the newly introduced reporting dashboards. Users are encouraged to participate in a short survey to help improve the usability and effectiveness of the analytics platform.</p>
+        <p><strong>Upcoming Deprecation:</strong> Support for Windows 8.1 devices will officially end on July 1, 2025. Organizations should upgrade their systems to a newer Windows version to maintain security, performance, and compatibility with Microsoft services.</p>
+        <p><strong>Feedback Opportunity:</strong> Microsoft is gathering feedback from IT administrators on the new reporting dashboards. Users are encouraged to participate in surveys and provide insights that will help shape future updates.</p>
     </div>
     
     <script>
         function showContent(sectionId) {
-            var sections = document.querySelectorAll('.content');
-            sections.forEach(section => section.style.display = 'none');
+            document.querySelectorAll('.content').forEach(section => section.style.display = 'none');
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
