@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Enrollment in Intune</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background: #0078D4;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #0078D4;
+            background: #eaf4ff;
+        }
+        h2 {
+            color: #0078D4;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">iOS Enrollment in Intune</div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Automated Device Enrollment</h2>
+            <p>Best for corporate-owned iOS devices enrolled through Apple Business Manager.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Ensure your organization is set up with Apple Business Manager.</li>
+                <li>Sync Apple devices with Intune.</li>
+                <li>Assign an enrollment profile to the devices.</li>
+                <li>Devices enroll automatically upon activation.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. User Enrollment</h2>
+            <p>Best for personal (BYOD) iOS devices where work apps need separation.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Users download the Microsoft Intune Company Portal app.</li>
+                <li>Sign in with a work account.</li>
+                <li>Follow the guided steps to set up a work profile.</li>
+                <li>Work apps and data are managed separately from personal apps.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Device Enrollment</h2>
+            <p>Best for corporate-owned iOS devices where full control is required.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Reset the device to factory settings if needed.</li>
+                <li>Download and install the Microsoft Intune Company Portal app.</li>
+                <li>Sign in with a work account and follow the enrollment steps.</li>
+                <li>Device enrolls and applies corporate policies automatically.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
