@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Configuration in Intune</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background: #0078D4;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #0078D4;
+            background: #eaf4ff;
+        }
+        h2 {
+            color: #0078D4;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Device Configuration in Intune</div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Create Configuration Profile</h2>
+            <p>Used to manage device settings and security policies.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Go to Microsoft Intune Admin Center.</li>
+                <li>Navigate to Devices → Configuration Profiles.</li>
+                <li>Click "Create Profile" and choose platform.</li>
+                <li>Select profile type and configure settings.</li>
+                <li>Assign to users or groups and save.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Assign Configuration Profiles</h2>
+            <p>Ensure that the profile is applied to the correct devices.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>After creating a profile, go to Assignments.</li>
+                <li>Choose targeted user or device groups.</li>
+                <li>Review settings and deploy the profile.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Monitor and Troubleshoot</h2>
+            <p>Check if devices successfully received configurations.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Go to Intune → Devices → Monitor.</li>
+                <li>Check deployment status and resolve issues.</li>
+                <li>Use logs and reports for troubleshooting.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
