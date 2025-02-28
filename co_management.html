@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-Management in Intune</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background: #0078D4;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #0078D4;
+            background: #eaf4ff;
+        }
+        h2 {
+            color: #0078D4;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Co-Management in Intune</div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. What is Co-Management?</h2>
+            <p>Co-Management allows devices to be managed by both ConfigMgr (SCCM) and Intune.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Prerequisites</h2>
+            <p>Ensure the following before enabling Co-Management:</p>
+            <ul>
+                <li>ConfigMgr (SCCM) 1710 or later.</li>
+                <li>Azure AD Connect for Hybrid Join.</li>
+                <li>Intune and ConfigMgr licenses.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Enabling Co-Management</h2>
+            <p>Follow these steps to enable Co-Management:</p>
+            <ul>
+                <li>In ConfigMgr, navigate to <strong>Administration → Cloud Services → Co-Management</strong>.</li>
+                <li>Configure **Workloads** to determine management authority.</li>
+                <li>Ensure compliance policies sync properly.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
