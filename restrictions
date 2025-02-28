@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrollment Restrictions in Intune</title>
+    <title>Device Restrictions in Intune</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,30 +39,44 @@
     </style>
 </head>
 <body>
-    <div class="navbar">Enrollment Restrictions in Intune</div>
+    <div class="navbar">Device Restrictions in Intune</div>
 
     <div class="container">
         <div class="section">
-            <h2>1. Device Type Restrictions</h2>
-            <p>Control which types of devices can enroll in Intune.</p>
+            <h2>1. Application Restrictions</h2>
+            <p>Control which apps can be installed or used on the device.</p>
             <p><strong>Steps:</strong></p>
             <ul>
-                <li>Go to **Microsoft Intune Admin Center**.</li>
-                <li>Navigate to **Devices → Enrollment restrictions**.</li>
-                <li>Set restrictions for platforms like Android, iOS, Windows, and macOS.</li>
+                <li>Go to Intune Admin Center.</li>
+                <li>Navigate to **Device Configuration** → **Profiles**.</li>
+                <li>Create a **Device Restriction Profile**.</li>
+                <li>Configure app restrictions and assign to users or devices.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>2. Device Limit Restrictions</h2>
-            <p>Set the number of devices a user can enroll.</p>
+            <h2>2. Hardware Restrictions</h2>
+            <p>Limit the use of device features like camera, USB, or Bluetooth.</p>
             <p><strong>Steps:</strong></p>
             <ul>
-                <li>In the **Intune Admin Center**, go to **Devices → Enrollment restrictions**.</li>
-                <li>Set a limit for how many devices each user can enroll.</li>
-                <li>Save the configuration to enforce restrictions.</li>
+                <li>Go to **Endpoint Security** → **Device Restrictions**.</li>
+                <li>Select the restrictions to apply (e.g., disable camera).</li>
+                <li>Assign the policy to device groups.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Network Restrictions</h2>
+            <p>Restrict access to specific networks or enforce VPN usage.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Go to **Intune Admin Center**.</li>
+                <li>Navigate to **Device Configuration** → **Profiles**.</li>
+                <li>Create a new **Wi-Fi or VPN restriction policy**.</li>
+                <li>Assign it to the required devices.</li>
             </ul>
         </div>
     </div>
 </body>
 </html>
+
