@@ -19,6 +19,7 @@
             border-radius: 5px;
         }
         .section { display: none; }
+        .details { display: none; margin-top: 10px; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9; }
         .dark-mode { background-color: #121212; color: #ffffff; }
         .dark-mode .button-container button { background-color: #1e7e34; }
     </style>
@@ -43,19 +44,31 @@
     <div id="enrollment" class="section">
         <h2>Device Enrollment</h2>
         <ul>
-            <li><a href="#windows_enrollment">Windows Enrollment (AutoPilot, Hybrid AD)</a></li>
-            <li><a href="#android_enrollment">Android Enrollment (Fully Managed, BYOD)</a></li>
-            <li><a href="#ios_enrollment">iOS/macOS Enrollment (ABM, Manual)</a></li>
-            <li><a href="#restrictions">Enrollment Restrictions</a></li>
+            <li><a href="#" onclick="toggleDetails('windows_enrollment')">Windows Enrollment (AutoPilot, Hybrid AD)</a></li>
+            <div id="windows_enrollment" class="details">Step 1: Go to Intune Portal -> Step 2: Select AutoPilot -> Step 3: Configure...</div>
+            
+            <li><a href="#" onclick="toggleDetails('android_enrollment')">Android Enrollment (Fully Managed, BYOD)</a></li>
+            <div id="android_enrollment" class="details">Step 1: Navigate to Intune -> Step 2: Choose Android Enrollment -> Step 3: Follow steps...</div>
+            
+            <li><a href="#" onclick="toggleDetails('ios_enrollment')">iOS/macOS Enrollment (ABM, Manual)</a></li>
+            <div id="ios_enrollment" class="details">Step 1: Configure Apple Business Manager -> Step 2: Sync with Intune...</div>
+            
+            <li><a href="#" onclick="toggleDetails('restrictions')">Enrollment Restrictions</a></li>
+            <div id="restrictions" class="details">Step 1: Open Intune -> Step 2: Configure restrictions -> Step 3: Save settings...</div>
         </ul>
     </div>
-    
+
     <div id="app_management" class="section">
         <h2>App Management</h2>
         <ul>
-            <li><a href="#microsoft_store">Microsoft Store Apps</a></li>
-            <li><a href="#win32_apps">Win32 App Deployment</a></li>
-            <li><a href="#lob_apps">Line-of-Business (LOB) Apps</a></li>
+            <li><a href="#" onclick="toggleDetails('microsoft_store')">Microsoft Store Apps</a></li>
+            <div id="microsoft_store" class="details">Step 1: Open Intune -> Step 2: Select Microsoft Store -> Step 3: Configure App deployment...</div>
+            
+            <li><a href="#" onclick="toggleDetails('win32_apps')">Win32 App Deployment</a></li>
+            <div id="win32_apps" class="details">Step 1: Prepare IntuneWin package -> Step 2: Upload to Intune -> Step 3: Assign to devices...</div>
+            
+            <li><a href="#" onclick="toggleDetails('lob_apps')">Line-of-Business (LOB) Apps</a></li>
+            <div id="lob_apps" class="details">Step 1: Upload LOB app -> Step 2: Configure settings -> Step 3: Deploy to users...</div>
         </ul>
     </div>
     
@@ -66,6 +79,10 @@
         function showSection(sectionId) {
             document.querySelectorAll('.section').forEach(section => section.style.display = 'none');
             document.getElementById(sectionId).style.display = 'block';
+        }
+        function toggleDetails(detailsId) {
+            let details = document.getElementById(detailsId);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
