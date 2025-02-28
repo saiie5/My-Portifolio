@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Enrollment in Intune</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background: #0078D4;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #0078D4;
+            background: #eaf4ff;
+        }
+        h2 {
+            color: #0078D4;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Android Enrollment in Intune</div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Android Enterprise Enrollment</h2>
+            <p>Best for corporate-owned or BYOD Android devices.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Ensure your organization is set up with Android Enterprise in Intune.</li>
+                <li>Enable Android device enrollment policies.</li>
+                <li>Users sign in with their work account, and the device enrolls automatically.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Work Profile Enrollment</h2>
+            <p>Best for personal (BYOD) devices where work apps need separation.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Users download the Microsoft Intune Company Portal app.</li>
+                <li>Sign in with a work account.</li>
+                <li>Follow the guided steps to set up a work profile.</li>
+                <li>Work apps and data are kept separate from personal apps.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Fully Managed Enrollment</h2>
+            <p>Best for corporate-owned devices where full control is required.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Reset the device to factory settings.</li>
+                <li>On the welcome screen, tap multiple times to begin provisioning.</li>
+                <li>Scan a QR code or enter an enrollment token from Intune.</li>
+                <li>Device enrolls and applies corporate policies automatically.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
