@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intune Cheat Sheet</title>
+    <title>Intune</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; transition: background-color 0.3s, color 0.3s; }
         h1 { text-align: center; }
@@ -20,11 +20,20 @@
         }
         .section { display: none; }
         .details { display: none; margin-top: 10px; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9; }
-        
-        /* Dark Mode */
-        .dark-mode { background-color: #181818; color: #E0E0E0; }
-        .dark-mode .button-container button { background-color:#000000; color: #FFFFFF; border: 1px solid #21867A; }
-        .dark-mode .button-container button:hover { background-color: #21867A; }
+        .dark-mode { 
+    background-color: #181818; /* Slightly lighter than pure black for better contrast */
+    color: #E0E0E0; /* Soft white for less strain on the eyes */
+}
+
+.dark-mode .button-container button { 
+    background-color: #2A9D8F; /* A soothing teal-green */
+    color: #FFFFFF; /* White text for better readability */
+    border: 1px solid #21867A; /* Slightly darker border for a subtle contrast */
+}
+
+.dark-mode .button-container button:hover {
+    background-color: #21867A; /* Darker shade on hover */
+}
     </style>
 </head>
 <body>
@@ -47,18 +56,99 @@
     <div id="enrollment" class="section">
         <h2>Device Enrollment</h2>
         <ul>
-            <li><a href="#" onclick="toggleDetails('windows_enrollment')">Windows Enrollment (AutoPilot, Hybrid AD)</a></li>
-            <div id="windows_enrollment" class="details">Details about Windows Enrollment...</div>
+            <li><a href="../windows_enrollment.html" onclick="toggleDetails('windows_enrollment')">Windows Enrollment (AutoPilot, Hybrid AD)</a></li>
+            <div id="windows_enrollment" class="details"></div>
+            
+            <li><a href="../android_enrollment.html" onclick="toggleDetails('android_enrollment')">Android Enrollment (Fully Managed, BYOD)</a></li>
+            <div id="android_enrollment" class="details"></div>
+            
+            <li><a href="../ios_enrollment.html" onclick="toggleDetails('ios_enrollment')">iOS/macOS Enrollment (ABM, Manual)</a></li>
+            <div id="ios_enrollment" class="details"></div>
+            
+            <li><a href="../restrictions.html" onclick="toggleDetails('restrictions')">Enrollment Restrictions</a></li>
+            <div id="restrictions" class="details"></div>
         </ul>
     </div>
-    
+
     <div id="app_management" class="section">
         <h2>App Management</h2>
         <ul>
-            <li><a href="#" onclick="toggleDetails('microsoft_store')">Microsoft Store Apps</a></li>
-            <div id="microsoft_store" class="details">Steps for Microsoft Store Apps deployment...</div>
+            <li><a href="microsoft_store" onclick="toggleDetails('microsoft_store')">Microsoft Store Apps</a></li>
+            <div id="microsoft_store" class="details">Step 1: Open Intune -> Step 2: Select Microsoft Store -> Step 3: Configure App deployment...</div>
+            
+            <li><a href="win32_app" onclick="toggleDetails('win32_apps')">Win32 App Deployment</a></li>
+            <div id="win32_apps" class="details">Step 1: Prepare IntuneWin package -> Step 2: Upload to Intune -> Step 3: Assign to devices...</div>
+            
+            <li><a href="lob_app" onclick="toggleDetails('lob_apps')">Line-of-Business (LOB) Apps</a></li>
+            <div id="lob_apps" class="details">Step 1: Upload LOB app -> Step 2: Configure settings -> Step 3: Deploy to users...</div>
         </ul>
     </div>
+
+      <div id="compliance_security" class="section">
+        <h2>Compliance & Security</h2>
+        <ul>
+            <li><a href="../compliance_policies.html" onclick="toggleDetails('compliance_policies')">Compliance Policies</a></li>
+            <div id="compliance_policies" class="details">Step 1: Open Intune -> Step 2: Define compliance policies -> Step 3: Assign to devices...</div>
+        </ul>
+    </div>
+    
+    <div id="config_profiles" class="section">
+        <h2>Configuration Profiles</h2>
+        <ul>
+            <li><a href="../device_config.html" onclick="toggleDetails('device_config')">Device Configuration</a></li>
+            <div id="device_config" class="details">Step 1: Open Intune -> Step 2: Configure device settings -> Step 3: Assign to users...</div>
+        </ul>
+    </div>
+
+        
+    <div id="updates" class="section">
+        <h2>Windows Updates</h2>
+        <ul>
+            <li><a href="../update_profiles.html" onclick="toggleDetails('update_policies')">Update Policies</a></li>
+            <div id="update_policies" class="details">Step 1: Open Intune -> Step 2: Configure update rings -> Step 3: Assign to devices...</div>
+        </ul>
+    </div>
+    
+    <div id="security" class="section">
+        <h2>Endpoint Security</h2>
+        <ul>
+            <li><a href="../security_baselines.html" onclick="toggleDetails('security_baselines')">Security Baselines</a></li>
+            <div id="security_baselines" class="details">Step 1: Open Intune -> Step 2: Configure security baselines -> Step 3: Assign to devices...</div>
+        </ul>
+    </div>
+    <div id="autopilot" class="section">
+        <h2>Autopilot Deployment</h2>
+        <ul>
+            <li><a href="../autopilo_setup.html" onclick="toggleDetails('autopilot_setup')">Autopilot Setup</a></li>
+            <div id="autopilot_setup" class="details">Step 1: Configure Autopilot profiles -> Step 2: Upload device hash -> Step 3: Assign profiles...</div>
+        </ul>
+    </div>
+    
+    <div id="remote_actions" class="section">
+        <h2>Remote Actions</h2>
+        <ul>
+            <li><a href="../remote_wipe.html" onclick="toggleDetails('remote_wipe')">Remote Wipe</a></li>
+            <div id="remote_wipe" class="details">Step 1: Open Intune -> Step 2: Select device -> Step 3: Initiate wipe...</div>
+        </ul>
+    </div>
+    
+    <div id="monitoring" class="section">
+        <h2>Monitoring & Reports</h2>
+        <ul>
+            <li><a href="../device_compliance.html" onclick="toggleDetails('device_compliance')">Device Compliance Reports</a></li>
+            <div id="device_compliance" class="details">Step 1: Open Intune -> Step 2: Navigate to Reports -> Step 3: Review compliance data...</div>
+        </ul>
+    </div>
+    
+    <div id="co_management" class="section">
+        <h2>Co-Management with SCCM</h2>
+        <ul>
+            <li><a href="../co_management.html" onclick="toggleDetails('co_management_setup')">Co-Management Setup</a></li>
+            <div id="co_management_setup" class="details">Step 1: Configure SCCM Co-Management -> Step 2: Enable workloads -> Step 3: Monitor integration...</div>
+        </ul>
+    </div>
+    
+    
     
     <script>
         function toggleDarkMode() {
