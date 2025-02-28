@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intune Weekly Update</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .button-container { margin: 20px 0; }
+        button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .content { display: none; padding: 20px; border: 1px solid #ccc; margin-top: 20px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Intune Weekly Update</h1>
+    <div class="button-container">
+        <button onclick="showContent('newFeatures')">New Features</button>
+        <button onclick="showContent('bugFixes')">Bug Fixes</button>
+        <button onclick="showContent('knownIssues')">Known Issues</button>
+        <button onclick="showContent('additionalNotes')">Additional Notes</button>
+    </div>
+    
+    <div id="newFeatures" class="content">
+        <h2>New Features</h2>
+        <p><strong>Enhanced Device Compliance Policies:</strong> Administrators can now define more specific compliance rules, which allow for stricter security enforcement. This ensures that only devices meeting these granular requirements can access corporate resources.</p>
+        <p><strong>Advanced Reporting Dashboards:</strong> A newly designed dashboard provides IT administrators with in-depth analytics about device health, policy compliance, and security threats. These insights enable proactive problem-solving and optimization of endpoint management strategies.</p>
+    </div>
+    
+    <div id="bugFixes" class="content">
+        <h2>Bug Fixes</h2>
+        <p><strong>Resolved Policy Deployment Delays:</strong> Some users reported that policies were taking an unusually long time to be pushed to devices. This issue has now been fixed, ensuring policies deploy more efficiently and without unnecessary delays.</p>
+        <p><strong>Fixed Application Installation Errors:</strong> A problem affecting certain Android devices, where apps failed to install due to inconsistent configurations, has been resolved. This fix ensures a smoother deployment process for mobile applications across diverse devices.</p>
+    </div>
+    
+    <div id="knownIssues" class="content">
+        <h2>Known Issues</h2>
+        <p><strong>iOS Profile Installation Prompts:</strong> Users installing configuration profiles on iOS devices might experience repeated prompts asking for installation confirmation. Microsoft is currently investigating the root cause and working on a resolution.</p>
+        <p><strong>Windows Autopilot Enrollment Hangs:</strong> Some Windows devices may freeze during the Autopilot enrollment process. A temporary workaround involves restarting the device and retrying enrollment, though a permanent fix is being developed.</p>
+    </div>
+    
+    <div id="additionalNotes" class="content">
+        <h2>Additional Notes</h2>
+        <p><strong>Upcoming Deprecation:</strong> Support for Windows 8.1 devices will officially end on July 1, 2025. Organizations using these devices are advised to upgrade to a newer, supported version of Windows to maintain security and compatibility.</p>
+        <p><strong>Feedback Opportunity:</strong> Microsoft is seeking feedback from administrators on the newly introduced reporting dashboards. Users are encouraged to participate in a short survey to help improve the usability and effectiveness of the analytics platform.</p>
+    </div>
+    
+    <script>
+        function showContent(sectionId) {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
