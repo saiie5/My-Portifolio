@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Enrollment in Intune</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #0078D4;
+            background: #eaf4ff;
+        }
+        h2 {
+            color: #0078D4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Windows Enrollment in Intune</h1>
+
+        <div class="section">
+            <h2>1. Automatic Enrollment</h2>
+            <p>Best for corporate-owned devices that are Azure AD joined.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Enable MDM auto-enrollment in Azure AD.</li>
+                <li>Assign Intune licenses to users.</li>
+                <li>Users sign in with a work account, and the device enrolls automatically.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Windows Autopilot Enrollment</h2>
+            <p>Best for new or reset devices with a zero-touch experience.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Register devices in Autopilot using hardware IDs.</li>
+                <li>Configure an Autopilot profile in Intune.</li>
+                <li>Assign the profile to devices.</li>
+                <li>Devices connect to the internet and auto-enroll.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Manual Enrollment</h2>
+            <p>Best for personal (BYOD) or existing devices.</p>
+            <p><strong>Steps:</strong></p>
+            <ul>
+                <li>Go to <strong>Settings → Accounts → Access work or school</strong>.</li>
+                <li>Click <strong>Connect</strong> and sign in with a work account.</li>
+                <li>Device enrolls in Intune and applies policies.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
