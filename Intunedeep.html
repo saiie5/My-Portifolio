@@ -20,8 +20,20 @@
         }
         .section { display: none; }
         .details { display: none; margin-top: 10px; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9; }
-        .dark-mode { background-color: #121212; color: #ffffff; }
-        .dark-mode .button-container button { background-color: #1e7e34; }
+        .dark-mode { 
+    background-color: #181818; /* Slightly lighter than pure black for better contrast */
+    color: #E0E0E0; /* Soft white for less strain on the eyes */
+}
+
+.dark-mode .button-container button { 
+    background-color: #2A9D8F; /* A soothing teal-green */
+    color: #FFFFFF; /* White text for better readability */
+    border: 1px solid #21867A; /* Slightly darker border for a subtle contrast */
+}
+
+.dark-mode .button-container button:hover {
+    background-color: #21867A; /* Darker shade on hover */
+}
     </style>
 </head>
 <body>
