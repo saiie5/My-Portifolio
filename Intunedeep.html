@@ -44,74 +44,8 @@
     <div id="enrollment" class="section">
         <h2>Device Enrollment</h2>
         <ul>
-            <li><a href="#" onclick="toggleDetails('windows_enrollment')">Windows Enrollment (AutoPilot, Hybrid AD)</a></li>
-            <div id="windows_enrollment" class="details">Windows enrollment in Intune allows you to manage and secure Windows devices using Microsoft Endpoint Manager (MEM). There are several ways to enroll Windows devices into Intune, depending on the device type, ownership, and management requirements.
-
-## **Methods of Windows Enrollment in Intune**
-### **1. Automatic Enrollment (For Azure AD Joined or Hybrid Azure AD Joined Devices)**
-   - Suitable for corporate-owned devices.
-   - Users sign in with their work or school account, and the device gets automatically enrolled in Intune.
-
-   **Steps:**
-   1. Enable **MDM auto-enrollment** in **Azure AD**:
-      - Go to **Microsoft Intune Admin Center** → **Devices** → **Enroll devices** → **Automatic enrollment**.
-      - Configure **MDM user scope** (All or Selected users).
-   2. Ensure **users have Intune licenses**.
-   3. When users sign in with their work account, enrollment happens automatically.
-
----
-
-### **2. Windows Autopilot Enrollment (For Out-of-Box Experience)**
-   - Best for new or reset devices.
-   - Automates provisioning and eliminates manual setup.
-
-   **Steps:**
-   1. Register devices in **Autopilot** using hardware IDs.
-   2. Configure an **Autopilot profile** in Intune.
-   3. Assign the profile to devices.
-   4. When the device is turned on and connected to the internet, Autopilot automatically enrolls it.
-
----
-
-### **3. Manual Enrollment (For Existing Devices)**
-   - Suitable for personal (BYOD) or company-owned devices that are already in use.
-
-   **Steps:**
-   1. On the Windows device, go to **Settings** → **Accounts** → **Access work or school**.
-   2. Click **Connect** and sign in with a work/school account.
-   3. The device will enroll in Intune and apply policies.
-
----
-
-### **4. Group Policy Enrollment (For On-Prem AD Joined Devices)**
-   - Best for bulk enrollment of on-premises domain-joined devices.
-
-   **Steps:**
-   1. Configure **Group Policy** to auto-enroll devices in Intune.
-   2. Devices must be **Hybrid Azure AD joined**.
-   3. Once users sign in, the device automatically enrolls.
-
----
-
-### **5. Provisioning Package (For Offline Enrollment)**
-   - Best for bulk enrollment without internet access during setup.
-
-   **Steps:**
-   1. Use the **Windows Configuration Designer** to create a provisioning package.
-   2. Apply the package to devices via USB or network.
-
----
-
-## **Choosing the Right Enrollment Method**
-| Enrollment Method          | Best for                        | Requirements |
-|--------------------------|--------------------------------|-------------|
-| Automatic Enrollment | Corporate-owned, Azure AD joined | Azure AD, Intune license |
-| Windows Autopilot | New devices, Zero-touch deployment | Autopilot-registered device |
-| Manual Enrollment | Personal (BYOD) or existing devices | User action required |
-| Group Policy | On-prem AD-joined devices | Hybrid Azure AD join, GPO setup |
-| Provisioning Package | Bulk offline enrollment | Configuration Designer |
-
-Would you like a more detailed guide on any of these methods? 🚀.</div>
+            <li><a href="../windows_enrollment.html" onclick="toggleDetails('windows_enrollment')">Windows Enrollment (AutoPilot, Hybrid AD)</a></li>
+            <div id="windows_enrollment" class="details"></div>
             
             <li><a href="#" onclick="toggleDetails('android_enrollment')">Android Enrollment (Fully Managed, BYOD)</a></li>
             <div id="android_enrollment" class="details">Step 1: Navigate to Intune -> Step 2: Choose Android Enrollment -> Step 3: Follow steps...</div>
